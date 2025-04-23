@@ -236,6 +236,27 @@
     line-height: normal;
 }
 
+.box {
+width: 292px;
+height: 46px;
+}
+.box .rectangle {
+position: fixed;
+width: 292px;
+height: 46px;
+top: 0;
+left: 0;
+border-radius: 5.3px;
+border: 1.59px solid;
+border-color: #1e4b6e;
+box-shadow: 0px 2.12px 2.12px #00000040;
+background: linear-gradient(
+360deg,
+rgba(255, 140, 0, 0.85) 0%,
+rgba(255, 255, 255, 0.85) 100%
+);
+}
+
 .digi-business-card .contact-info {
     position: absolute;
     width: 129px;
