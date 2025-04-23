@@ -429,5 +429,10 @@ rgba(255, 255, 255, 0.85) 100%
     text-align: center;
     letter-spacing: -0.42px;
     line-height: normal;
+    background: linear-gradient(
+        360deg,
+        rgba(255, 140, 0, 0.85) 0%,
+        rgba(255, 255, 255, 0.85) 100%
+        );
 }
 
