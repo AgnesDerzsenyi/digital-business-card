@@ -1,157 +1,84 @@
-.digi-business-card {
-  background-color: #ffffff;
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-}
-
-.digi-business-card .div {
-  background-color: rgba(255, 255, 255, 1.0);
-  background: conic-gradient(
-    from 226deg at 66% 50%,
-    rgba(27, 65, 91, 0.85) 26%,
-    rgba(63, 96, 116, 0.85) 32%,
-    rgba(10, 60, 97, 0.85) 45%,
-    rgba(255, 140, 0, 0.85) 77%,
-    rgba(10, 60, 97, 0.85) 88%,
-    rgba(240, 217, 180, 0.85) 96%
-  );
-  width: 100%;
-  max-width: 420px;
-  min-height: 100vh;
+  padding: 20px;
   margin: 0 auto;
-  position: relative;
-  padding: 16px;
-  box-sizing: border-box;
 }
 
-/* HEADER */
-.digi-business-card .header {
-  position: relative;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: center;
-  margin-bottom: 20px;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* IMAGE FRAME */
-.digi-business-card .frame {
-  width: 320px;
-  height: 174px;
-  position: relative;
-  background-color: #ffffff;
-  border-radius: 20px;
-  margin: 0 auto 24px auto;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-}
-
-.digi-business-card .img-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.digi-business-card .img-wrapper img {
+.card img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 10px;
 }
 
-/* BUSINESS CARD SECTION */
-.digi-business-card .business-card {
-  position: absolute;
-  top: 152px;
-  left: 20px;
-  width: 280px;
-  height: 342px;
-  background-color: #f2f2f2;
-  border-radius: 40px;
-  border: 1px solid #cccccc;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 80px;
+.card-content {
   text-align: center;
 }
 
-/* PROFILE IMAGE */
-.digi-business-card .profile-picture {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 60px;
-  position: absolute;
-  top: 72px;
-  left: 100px;
-  border: 4px solid #ffffff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+.card h2 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-/* NAME & TITLE */
-.digi-business-card .name {
-  color: #1b415b;
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 16px;
+.card p {
+  margin: 0;
+  color: #666;
 }
 
-.digi-business-card .title {
-  color: #3f6074;
-  font-size: 16px;
-  margin-top: 8px;
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* CONTACT INFO */
-.digi-business-card .contact-info {
-  color: #0a3c61;
-  font-size: 14px;
-  margin-top: 12px;
-  line-height: 1.5;
+.social-icons a {
+  color: #555;
+  transition: color 0.3s;
 }
 
-/* IMAGE SCALING */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.social-icons a:hover {
+  color: #000;
 }
 
-/* ------------------------------- */
-/* RESPONSIVE ADJUSTMENTS BELOW   */
-/* ------------------------------- */
-@media (min-width: 600px) {
-  .digi-business-card .div {
-    max-width: 600px;
-    padding: 24px;
+/* === Responsive Layout === */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 700px;
+    padding: 30px;
+    gap: 30px;
   }
 
-  .digi-business-card .header {
-    font-size: 28px;
-  }
-
-  .digi-business-card .business-card {
-    position: static;
-    width: 100%;
+  .card img {
+    width: 40%;
     height: auto;
-    padding-top: 100px;
-    margin-top: 24px;
+    border-radius: 15px;
   }
 
-  .digi-business-card .profile-picture {
-    position: static;
-    margin: -60px auto 0 auto;
-    display: block;
+  .card-content {
+    text-align: left;
+    flex: 1;
   }
 
-  .digi-business-card .name,
-  .digi-business-card .title,
-  .digi-business-card .contact-info {
-    position: static;
-    transform: none;
-    text-align: center;
-    margin: 8px auto;
+  .card h2 {
+    font-size: 2rem;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
   }
 }
